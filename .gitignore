@@ -1,0 +1,46 @@
+# ── Environment & secrets ─────────────────────────────────────────────────────
+.env
+*.env.local
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+
+# ── dbt ───────────────────────────────────────────────────────────────────────
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# ── Airflow ───────────────────────────────────────────────────────────────────
+logs/
+airflow.db
+airflow.cfg
+webserver_config.py
+standalone_admin_password.txt
+
+# ── Spark / PySpark ───────────────────────────────────────────────────────────
+derby.log
+metastore_db/
+spark-warehouse/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+postgres_data/

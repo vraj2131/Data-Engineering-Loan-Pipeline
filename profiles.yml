@@ -1,0 +1,12 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_HOST', 'localhost') }}"
+      user: "{{ env_var('DBT_USER', 'pipeline_user') }}"
+      password: "{{ env_var('DBT_PASSWORD', 'pipeline_pass') }}"
+      port: 5432
+      dbname: "{{ env_var('DBT_DBNAME', 'loandb') }}"
+      schema: "{{ env_var('DBT_SCHEMA', 'silver') }}"
+      threads: "{{ env_var('DBT_THREADS', '4') | int }}"

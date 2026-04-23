@@ -1,0 +1,6 @@
+servicer_id,servicer_name,region,state_code,portfolio_size,active_loans,last_updated_timestamp
+SV01,Wells Fargo Home Mortgage,West,CA,48500,42100,2024-01-01 00:00:00
+SV02,JPMorgan Chase Bank,Northeast,NY,62300,55800,2024-01-01 00:00:00
+SV03,Bank of America Mortgage,Southeast,NC,39700,34200,2024-01-01 00:00:00
+SV04,Quicken Loans,Midwest,MI,71200,65400,2024-01-01 00:00:00
+SV05,U.S. Bank Home Mortgage,Midwest,MN,29800,26100,2024-01-01 00:00:00

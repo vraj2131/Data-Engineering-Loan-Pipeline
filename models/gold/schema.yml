@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: loan_risk_kpis
+    description: Monthly origination KPIs with delinquency rates and risk tiers, grouped by loan purpose.
+    columns:
+      - name: origination_month
+        description: Month of loan origination (truncated to first of month)
+      - name: loan_purpose
+        description: Purchase or Refinance
+      - name: delinquency_rate_pct
+        description: Percentage of loans not in Current status
+        tests:
+          - not_null
+      - name: risk_tier
+        description: High / Medium / Low based on average interest rate
+
+  - name: servicer_performance
+    description: Per-servicer portfolio health — delinquency rate and overall health rating.
+    columns:
+      - name: servicer_id
+        tests:
+          - not_null
+          - unique
+      - name: servicer_health
+        description: Excellent / Good / At Risk / Critical based on delinquency rate
+
+  - name: borrower_risk_profile
+    description: Per-borrower credit tier, DTI risk band, and underwriting category.
+    columns:
+      - name: borrower_id
+        tests:
+          - not_null
+          - unique
+      - name: credit_tier
+        description: Prime / Near-Prime / Subprime / Deep-Subprime
+      - name: dti_risk_band
+        description: Low Risk / Moderate Risk / High Risk
+      - name: underwriting_category
+        description: Preferred / Standard / Elevated
