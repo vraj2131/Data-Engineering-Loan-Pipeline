@@ -153,7 +153,7 @@ start → bronze_ingestion → dbt_silver_run → dbt_gold_run → dbt_snapshots
 
 **Successful pipeline run — all 7 tasks green:**
 
-![Airflow Pipeline Run](Images/Screenshot%202026-04-23%20at%205.18.13%20PM.png)
+![Airflow Pipeline Run](Images/airflow_pipeline_run.png)
 
 ### Running Locally
 
